@@ -1,20 +1,13 @@
 pragma solidity >=0.4.22 <0.9.0;
 // SPDX-License-Identifier: MIT
 contract HelloWorld {
+    string public message;
 
-    string saySomething;
+    function hello(string initialMessage) public {
+        message = initialMessage;
+        }
 
-    constructor()  {
-        saySomething = "Hello World!";
+    function setMessage(string newMessage) public {
+        message = newMessage;
     }
-
-    function speak() public view returns(string memory) {
-        return saySomething;
-    }
-
-    function saySomethingElse(string memory newSaying) public  returns(bool success) {
-        saySomething = newSaying;
-        return true;
-    }
-
 }
