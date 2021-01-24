@@ -6,11 +6,11 @@ contract HelloWorld {
         saySomething = "Hello World!";
     }
 
-    function speak() public constant returns(string itSays) {
+    function speak() public view returns(string memory) {
         return saySomething;
     }
 
-    function saySomethingElse(string newSaying) public  returns(bool success) {
+    function saySomethingElse(string memory newSaying) public  returns(bool success) {
         saySomething = newSaying;
         return true;
     }
