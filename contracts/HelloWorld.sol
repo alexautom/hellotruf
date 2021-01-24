@@ -1,9 +1,18 @@
-pragma solidity >=0.4.22 <0.9.0;
-// SPDX-License-Identifier: MIT
-
-
 contract HelloWorld {
-    function sayHello() public pure returns(string memory){
-        return("hello world");
+
+    string saySomething;
+
+    constructor() public  {
+        saySomething = "Hello World!";
     }
+
+    function speak() public constant returns(string itSays) {
+        return saySomething;
+    }
+
+    function saySomethingElse(string newSaying) public  returns(bool success) {
+        saySomething = newSaying;
+        return true;
+    }
+
 }
