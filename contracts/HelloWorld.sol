@@ -1,8 +1,10 @@
+pragma solidity >=0.4.22 <0.9.0;
+// SPDX-License-Identifier: MIT
 contract HelloWorld {
 
     string saySomething;
 
-    constructor() public  {
+    constructor()  {
         saySomething = "Hello World!";
     }
 
